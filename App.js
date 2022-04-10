@@ -1,8 +1,12 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {View, Text} from 'react-native';
 
-const app = () => {
-  <Text> Deneme</Text>;
-};
+function App() {
+  return (
+    <View>
+      <Text> Deneme </Text>
+    </View>
+  );
+}
 
-export default app;
+export default App;
