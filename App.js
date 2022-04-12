@@ -3,28 +3,26 @@ import {View, Text, SafeAreaView, Button, StyleSheet} from 'react-native';
 
 function App() {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text> Deneme </Text>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.upperView}>
+        <Text> Hello World </Text>
       </View>
-      <Button
-        title="Press me"
-        onPress={() => {
-          console.log('Basıldı dimi');
-        }}
-        disabled={false}
-        color={'#02af34'}
-      />
+      <View style={styles.bottomView}>
+        <Text> Merhaba Dünya </Text>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'red',
-    margin: 20,
-    padding: 10,
-    borderRadius: 10,
+  container: {flex: 1},
+  upperView: {
+    backgroundColor: 'blue',
+    flex: 1,
+  },
+  bottomView: {
+    backgroundColor: 'yellow',
+    flex: 1,
   },
 });
 
