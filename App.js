@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {flex: 1},
   upperView: {
     backgroundColor: 'blue',
-    flex: 1,
+    flex: 3,
   },
   bottomView: {
     backgroundColor: 'yellow',
