@@ -7,6 +7,9 @@ function App() {
       <View style={styles.upperView}>
         <Text> Hello World </Text>
       </View>
+      <View style={styles.middleView}>
+        <Text> Merhaba Dünya </Text>
+      </View>
       <View style={styles.bottomView}>
         <Text> Merhaba Dünya </Text>
       </View>
@@ -23,6 +26,10 @@ const styles = StyleSheet.create({
   bottomView: {
     backgroundColor: 'yellow',
     flex: 1,
+  },
+  middleView: {
+    backgroundColor: 'red',
+    flex: 2,
   },
 });
 
