@@ -13,7 +13,13 @@ function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1, flexDirection: 'row'},
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'lightgray',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   box_1: {
     backgroundColor: 'blue',
     width: 75,
