@@ -18,7 +18,7 @@ function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {flex: 1, flexDirection: 'row'},
   upperView: {
     backgroundColor: 'blue',
     flex: 3,
