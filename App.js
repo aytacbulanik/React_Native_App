@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, SafeAreaView, Button, StyleSheet} from 'react-native';
+import {View, SafeAreaView, StyleSheet} from 'react-native';
 
 function App() {
   return (
