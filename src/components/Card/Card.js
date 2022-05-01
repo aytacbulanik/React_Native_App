@@ -1,20 +1,18 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'React-native';
+import {View, Text, TouchableOpacity, SafeAreaView} from 'React-native';
 import style from './Card.style';
 
-const app = () => {
+const Card = () => {
   return (
-    <View style={style.cardContainer}>
-      <View>
-      <Text>Joe Byden</Text>
-      <Text> Nasılsınız Dünya</Text>
+    <SafeAreaView style={style.cardContainer}>
+      <View style={style.cardView}>
+        <View>
+          <Text>Joe Byden</Text>
+          <Text> Nasılsınız Dünya</Text>
+        </View>
       </View>
-      <TouchableOpacity>
-        
-      </TouchableOpacity>
-      
-    </View>
+    </SafeAreaView>
   );
 };
 
-export default app;
+export default Card;
