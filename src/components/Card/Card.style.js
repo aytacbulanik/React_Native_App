@@ -1,11 +1,11 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  cardContainer: {
+  safeAreaContainer: {
     flex: 1,
     backgroundColor: '#e0e0e0',
   },
-  cardView: {
+  cardContainer: {
     backgroundColor: 'white',
   },
 });
