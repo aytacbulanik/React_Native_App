@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
+import Card from './components/Card';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Text>I LIKED</Text>
         </TouchableOpacity>
       </View>
+      <Card />
     </SafeAreaView>
   );
 }
