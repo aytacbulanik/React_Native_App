@@ -2,7 +2,8 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
+    borderWidth: 2,
+    margin: 2,
   },
   image: {},
   title: {},
