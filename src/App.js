@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, FlatList} from 'react-native';
+import NewsCard from './components/NewsCard';
 import news_data from './news_data.json';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         data={news_data}
         renderItem={({item}) => <Text>{item.title}</Text>}
       />
+      <NewsCard />
     </SafeAreaView>
   );
 }
