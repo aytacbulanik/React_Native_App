@@ -1,11 +1,28 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    borderWidth: 2,
-    margin: 2,
+    backgroundColor: 'white',
+    margin: 10,
+    borderRadius: 10,
   },
-  image: {},
-  title: {},
+  image: {
+    height: Dimensions.get('window').height / 4,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 15,
+  },
   description: {},
+  innerContainer: {
+    padding: 5,
+  },
+  author: {
+    fontStyle: 'italic',
+    padding: 5,
+    color: 'gray',
+    textAlign: 'right',
+  },
 });
