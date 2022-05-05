@@ -1,13 +1,14 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, FlatList} from 'react-native';
+import news_data from './news_data.json';
 
 function App() {
   return (
     <SafeAreaView style={style.safeAreaContainer}>
       <Text>Flatlist Projesi</Text>
       <FlatList
-        data={[1, 2, 3, 4, 5, 6, 7]}
-        renderItem={data => <Text>{data.item}</Text>}
+        data={news_data}
+        renderItem={({item}) => <Text>{item.title}</Text>}
       />
     </SafeAreaView>
   );
