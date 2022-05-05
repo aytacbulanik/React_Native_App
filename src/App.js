@@ -7,11 +7,7 @@ function App() {
   return (
     <SafeAreaView style={style.safeAreaContainer}>
       <Text>Flatlist Projesi</Text>
-      <FlatList
-        data={news_data}
-        renderItem={({item}) => <Text>{item.title}</Text>}
-      />
-      <NewsCard />
+      <FlatList data={news_data} renderItem={({item}) => <NewsCard />} />
     </SafeAreaView>
   );
 }

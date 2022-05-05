@@ -1,8 +1,15 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text, View, Image} from 'react-native';
+import styles from './NewsCard.style';
 
 const newsCard = () => {
-  return <Text> Deneme </Text>;
+  return (
+    <View style={styles.container}>
+      <Image style={styles.image} />
+      <Text style={styles.title}> Deneme Verisi </Text>
+      <Text style={styles.description}> Açıklama </Text>
+    </View>
+  );
 };
 
 export default newsCard;
