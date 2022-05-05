@@ -1,13 +1,14 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import Card from './components/Card';
+import {SafeAreaView, StyleSheet, Text, FlatList} from 'react-native';
 
 function App() {
   return (
     <SafeAreaView style={style.safeAreaContainer}>
-      <Card title="Joe Biden" words="Dünya benden korksun" />
-      <Card title="Arif Işık" words="Uzaylılar tarafından kaçırıldım" />
-      <Card title="Sıla" words="Yıkılmışım ben" />
+      <Text>Flatlist Projesi</Text>
+      <FlatList
+        data={[1, 2, 3, 4, 5, 6, 7]}
+        renderItem={data => <Text>{data.item}</Text>}
+      />
     </SafeAreaView>
   );
 }
