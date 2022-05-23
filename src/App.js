@@ -1,42 +1,34 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  FlatList,
-  ScrollView,
-  Image,
-  Dimensions,
-} from 'react-native';
-import NewsCard from './components/NewsCard';
-import news_data from './news_data.json';
-import news_banner_data from './news_banner_data.json';
+import {SafeAreaView, Text, Button, StyleSheet} from 'react-native';
 
 function App() {
-  const renderItems = ({item}) => <NewsCard news={item} />;
+  let counter = 0;
+  function updateCounter() {
+    counter += 1;
+    console.log(counter);
+  }
   return (
-    <SafeAreaView style={style.safeAreaContainer}>
-      <ScrollView horizontal>
-        {news_banner_data.map(newsbanner => (
-          <Image
-            style={style.bannerImage}
-            source={{uri: newsbanner.imageUrl}}
-          />
-        ))}
-      </ScrollView>
-      <FlatList data={news_data} renderItem={renderItems} />
+    <SafeAreaView>
+      <Text style={styles.textContainer}>Counter : {counter}</Text>
+      <Button
+        style={styles.buttonContainer}
+        title="Arttır"
+        onPress={() => {
+          updateCounter();
+        }}
+      />
     </SafeAreaView>
   );
 }
-
-const style = StyleSheet.create({
-  safeAreaContainer: {
-    flex: 1,
-    backgroundColor: '#e0e0e0',
+const styles = StyleSheet.create({
+  textContainer: {
+    fontSize: 30,
+    margin: 20,
   },
-  bannerImage: {
-    width: Dimensions.get('window').width / 3,
-    height: Dimensions.get('window').height / 4,
+  buttonContainer: {
+    margin: 20,
+    color: 'red',
+    backgroundColor: 'green',
   },
 });
 
