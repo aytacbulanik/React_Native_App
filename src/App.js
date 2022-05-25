@@ -2,10 +2,14 @@ import React, {useState} from 'react';
 import {SafeAreaView, Text, Button, StyleSheet} from 'react-native';
 
 function App() {
-  const [counter, setCounter] = useState(5);
+  const [counter, setCounter] = useState(0);
 
-  function updateCounter() {
+  function upCounter() {
     setCounter(counter + 1);
+  }
+
+  function downCounter() {
+    setCounter(counter - 1);
   }
 
   return (
@@ -14,7 +18,12 @@ function App() {
       <Button
         style={styles.buttonContainer}
         title="Arttır"
-        onPress={updateCounter}
+        onPress={upCounter}
+      />
+      <Button
+        style={styles.buttonContainer}
+        title="Azalt"
+        onPress={downCounter}
       />
     </SafeAreaView>
   );
