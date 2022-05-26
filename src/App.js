@@ -2,15 +2,14 @@ import React, {useState} from 'react';
 import {SafeAreaView, Text, Button, StyleSheet} from 'react-native';
 
 function App() {
-  const [counter, setCounter] = useState(0);
-
-  function upCounter() {
-    setCounter(counter + 1);
-  }
-
-  function downCounter() {
-    setCounter(counter - 1);
-  }
+  const data = [
+    {id: 0, name: 'cafe.exe', isFavorite: true},
+    {id: 1, name: 'KafaKafa', isFavorite: false},
+    {id: 2, name: 'BugS', isFavorite: false},
+    {id: 3, name: 'Rock in code', isFavorite: true},
+    {id: 4, name: 'do drink', isFavorite: false},
+    {id: 5, name: 'esc', isFavorite: true},
+  ];
 
   return (
     <SafeAreaView>
