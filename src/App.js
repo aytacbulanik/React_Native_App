@@ -11,12 +11,14 @@ const data = [
 ];
 
 function App() {
-  
-
+  const [cafeList, setCafeList] = useState(data);
   return (
     <SafeAreaView>
-      <Switch> </Switch>
-      <FlatList />
+      <Switch />
+      <FlatList
+        data={cafeList}
+        renderItem={({item}) => <Text> {item.name}</Text>}
+      />
     </SafeAreaView>
   );
 }
