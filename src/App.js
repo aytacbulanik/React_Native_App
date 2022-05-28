@@ -1,46 +1,15 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Text, FlatList, StyleSheet, Switch} from 'react-native';
-
-const data = [
-  {id: 0, name: 'cafe.exe', isFavorite: true},
-  {id: 1, name: 'KafaKafa', isFavorite: false},
-  {id: 2, name: 'BugS', isFavorite: false},
-  {id: 3, name: 'Rock in code', isFavorite: true},
-  {id: 4, name: 'do drink', isFavorite: false},
-  {id: 5, name: 'esc', isFavorite: true},
-];
+import {SafeAreaView, Text, Button} from 'react-native';
 
 function App() {
-  const [cafeList, setCafeList] = useState(data);
-  const [showFavorite, sethowFavorite] = useState(true);
-
-  function onSwitchChange(isSelected) {
-    sethowFavorite(isSelected);
-    isSelected
-      ? setCafeList(cafeList.filter(cafe => cafe.isFavorite))
-      : setCafeList(data);
-  }
+  const [number, setNumber] = useState(0);
   return (
     <SafeAreaView>
-      <Switch value={showFavorite} onValueChange={onSwitchChange} />
-      <FlatList
-        style={styles.textContainer}
-        data={cafeList}
-        renderItem={({item}) => <Text>{item.name}</Text>}
-      />
+      <Text> Deneme sayısı</Text>
+      <Text> Sayı : {number}</Text>
+      <Button title='Arttır' onPress={() => setNumber(number + 2)}/>
     </SafeAreaView>
   );
 }
-const styles = StyleSheet.create({
-  textContainer: {
-    fontSize: 30,
-    margin: 20,
-  },
-  buttonContainer: {
-    margin: 20,
-    color: 'red',
-    backgroundColor: 'green',
-  },
-});
 
 export default App;
