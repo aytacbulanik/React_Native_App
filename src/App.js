@@ -15,11 +15,14 @@ function App() {
   const [showFavorite, sethowFavorite] = useState(true);
 
   function onSwitchChange(isSelected) {
-    sethowFavorite(isSelected)
+    sethowFavorite(isSelected);
+    isSelected
+      ? setCafeList(cafeList.filter(cafe => cafe.isFavorite))
+      : setCafeList(data);
   }
   return (
     <SafeAreaView>
-      <Switch value={showFavorite} onValueChange={onSwitchChange}/>
+      <Switch value={showFavorite} onValueChange={onSwitchChange} />
       <FlatList
         style={styles.textContainer}
         data={cafeList}
