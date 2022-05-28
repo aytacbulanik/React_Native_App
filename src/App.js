@@ -12,12 +12,18 @@ const data = [
 
 function App() {
   const [cafeList, setCafeList] = useState(data);
+  const [showFavorite, sethowFavorite] = useState(true);
+
+  function onSwitchChange(isSelected) {
+    sethowFavorite(isSelected)
+  }
   return (
     <SafeAreaView>
-      <Switch />
+      <Switch value={showFavorite} onValueChange={onSwitchChange}/>
       <FlatList
+        style={styles.textContainer}
         data={cafeList}
-        renderItem={({item}) => <Text> {item.name}</Text>}
+        renderItem={({item}) => <Text>{item.name}</Text>}
       />
     </SafeAreaView>
   );
