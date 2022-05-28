@@ -2,24 +2,30 @@ import React, {useState, useEffect} from 'react';
 import {SafeAreaView, Text, Button} from 'react-native';
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [useFlag, setUseFlag] = useState(true);
 
-  useEffect(() => {
-    console.log('number changed');
-  }, [number]);
-
-  function flowNumber() {
-    console.log('1. Mumber value : ' + number);
-    setNumber(number + 1);
-    console.log('2. Mumber value : ' + number);
+  function goruntuyuDegis() {
+    setUseFlag(!useFlag);
   }
+
   return (
     <SafeAreaView>
-      <Text> Deneme sayısı</Text>
-      <Text> Sayı : {number}</Text>
-      <Button title="Arttır" onPress={flowNumber} />
+      <Text> Hadi birşeyleri değiştir.</Text>
+      <Button title="Değiştir" onPress={goruntuyuDegis} />
+      {useFlag && <Hello />}
     </SafeAreaView>
   );
 }
 
 export default App;
+
+function Hello() {
+  useEffect(() => {
+    console.log('bir defa çalşışacağım');
+
+    return () => {
+      console.log('silindiğim zaman çalışacağım');
+    };
+  }, []);
+  return <Text>merhaba ben kaybolacak Component</Text>;
+}
